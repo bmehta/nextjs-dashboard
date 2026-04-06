@@ -29,15 +29,3 @@ jobs:
 
       - name: Run tests
         run: pnpm test
-
-  copilot-review:
-    name: Copilot Code Review
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      pull-requests: write
-
-    steps:
-      - uses: actions/checkout@v4
-
-      - uses: github/copilot-code-review@v1
